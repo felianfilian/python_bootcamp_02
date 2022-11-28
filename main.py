@@ -1,9 +1,7 @@
+from avg_height import avg_height
 
-fruits = ["apple", "peach", "pear"]
-
-for fruit in fruits:
-    print(fruit)
+avg_height()
 
 
 
- 
+
