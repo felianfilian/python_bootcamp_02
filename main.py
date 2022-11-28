@@ -5,7 +5,10 @@ from fizz_buzz import fizz_buzz
 from password_gen import password_gen
 
 # avg_height()
-high_score()
+# high_score()
+even_numbers()
+fizz_buzz()
+password_gen()
 
 
 
