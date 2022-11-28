@@ -7,7 +7,7 @@ from password_gen import password_gen
 # avg_height()
 # high_score()
 # even_numbers()
-fizz_buzz()
+# fizz_buzz()
 password_gen()
 
 
