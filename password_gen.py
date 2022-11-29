@@ -10,7 +10,20 @@ def password_gen():
     symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
     letter_count = int(input("how many letters:\n"))
-    symbol_count = int(input("how many symbols:\n"))
     numbers_count = int(input("how many numbers:\n"))
+    symbol_count = int(input("how many symbols:\n"))
 
-    
+    password = ""
+
+    for sign in range (1, letter_count + 1):
+        rand_sign = random.randint(0,3)
+        if rand_sign == 0 and numbers_count > 0:
+            numbers_count -= 1
+            password += random.choice(numbers)
+        if rand_sign == 1 and symbol_count > 0:
+            symbol_count -= 1
+            password += random.choice(symbols)
+        else:
+            password += random.choice(letters)
+
+    print("Your Password:\n" + password)
