@@ -13,17 +13,19 @@ def password_gen():
     numbers_count = int(input("how many numbers:\n"))
     symbol_count = int(input("how many symbols:\n"))
 
-    password = ""
+    password = []
 
-    for sign in range (1, letter_count + 1):
-        rand_sign = random.randint(0,3)
-        if rand_sign == 0 and numbers_count > 0:
-            numbers_count -= 1
-            password += random.choice(numbers)
-        if rand_sign == 1 and symbol_count > 0:
-            symbol_count -= 1
-            password += random.choice(symbols)
-        else:
-            password += random.choice(letters)
+    for sign in range (1, numbers_count + 1):
+        password.append(random.choice(numbers))
+    for sign in range(1, symbol_count + 1):
+        password.append(random.choice(symbols))
+    for sign in range(1, letter_count + 1):
+        password.append(random.choice(letters))
 
-    print("Your Password:\n" + password)
+    random.shuffle(password)
+    pass_out = ""
+
+    for char in password:
+        pass_out += char
+
+    print("Your Password:\n" + str(pass_out))
