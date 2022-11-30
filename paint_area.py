@@ -1,5 +1,7 @@
+import math
+
 def paint_cans(height, width):
-    can_count = height * width / 5
+    can_count = math.ceil(height * width / 5)
     print(f"{height} x {width} = {can_count}")
 
 
