@@ -6,7 +6,7 @@ from password_gen import password_gen
 from hangman import hangman
 import paint_area
 import prime_check
-
+import caesar_cipher
 
 # avg_height()
 # high_score()
@@ -15,7 +15,8 @@ import prime_check
 # password_gen()
 # hangman()
 # paint_area.paint_area()
-prime_check.start()
+# prime_check.start()
+caesar_cipher.start()
 
 
 
