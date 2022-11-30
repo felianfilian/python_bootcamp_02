@@ -67,7 +67,6 @@ def hangman():
     empty_word = []
     lives = 6
 
-
     for char in pick_word:
         empty_word.append("_")
 
