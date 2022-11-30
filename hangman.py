@@ -1,42 +1,41 @@
 import random
 
+import hangman_words
+import hangman_art
 
 def hangman():
     print("hangman")
+    print(hangman_art.logo)
 
-    word_list = [
-        "carmageddon",
-        "braveheart",
-        "crystalball",
-        "gothic"
-    ]
-
-    pick_word = random.choice(word_list)
+    pick_word = random.choice(hangman_words.word_list)
 
     empty_word = []
     lives = 6
+    gameover = False
 
-    for char in pick_word:
+    for _ in range(len(pick_word)):
         empty_word.append("_")
 
-    while "_" in empty_word:
-        # print(stages[lives])
-        if lives <= 0:
-            print("YOU LOOSE")
-            break
+    while not gameover:
+        print(hangman_art.stages[lives])
         print(empty_word)
         print("LIVES: " + str(lives))
         letter = input("Guess a letter:\n").lower()
         if letter in empty_word:
-            print(f"the letter {letter} is already in the word")
+            print(f"the letter {letter} is already checked")
         else:
             for i in range(len(empty_word)):
-                if letter in pick_word:
+                if letter == pick_word[i]:
                     empty_word[i] = letter
-            if not letter in empty_word:
-                lives -= 1
-                print("letter is not in the word")
+        if not letter in empty_word:
+            lives -= 1
+            print("letter is not in the word")
+        if lives <= 0:
+            print("YOU LOOSE")
+            print(hangman_art.stages[lives])
+            gameover = True
+        if not "_" in empty_word:
+            print("YOU WON")
+            gameover = True
 
-    if not "_" in empty_word:
-        print("YOU WON")
     print("finished")
