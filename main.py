@@ -4,14 +4,16 @@ from even_numbers import even_numbers
 from fizz_buzz import fizz_buzz
 from password_gen import password_gen
 from hangman import hangman
+import paint_area
+
 
 # avg_height()
 # high_score()
 # even_numbers()
 # fizz_buzz()
 # password_gen()
-hangman()
-
+# hangman()
+paint_area.paint_area()
 
 
 
