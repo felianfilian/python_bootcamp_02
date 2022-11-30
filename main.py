@@ -5,6 +5,7 @@ from fizz_buzz import fizz_buzz
 from password_gen import password_gen
 from hangman import hangman
 import paint_area
+import prime_check
 
 
 # avg_height()
@@ -13,8 +14,8 @@ import paint_area
 # fizz_buzz()
 # password_gen()
 # hangman()
-paint_area.paint_area()
-
+# paint_area.paint_area()
+prime_check.start()
 
 
 
