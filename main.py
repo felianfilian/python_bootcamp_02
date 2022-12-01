@@ -7,6 +7,7 @@ from hangman import hangman
 import paint_area
 import prime_check
 import caesar_cipher
+import dic_list
 
 # avg_height()
 # high_score()
@@ -16,7 +17,6 @@ import caesar_cipher
 # hangman()
 # paint_area.paint_area()
 # prime_check.start()
-caesar_cipher.start()
-
-
+# caesar_cipher.start()
+dic_list.start()
 
