@@ -8,6 +8,7 @@ import paint_area
 import prime_check
 import caesar_cipher
 import dic_list
+import first_price_auction
 
 # avg_height()
 # high_score()
@@ -18,5 +19,6 @@ import dic_list
 # paint_area.paint_area()
 # prime_check.start()
 # caesar_cipher.start()
-dic_list.start()
+# dic_list.start()
+first_price_auction.start()
 

@@ -24,4 +24,4 @@ def start():
 
     # 🚨 Do not change the code below
     add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
-    print(travel_log[2])
+    print(travel_log[2]["country"])
