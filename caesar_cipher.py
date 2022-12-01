@@ -6,9 +6,12 @@ def crypt(plain_text, shift_amount, type):
     if type == 1:
         shift_amount *= -1
     for letter in plain_text:
-        position = alphabet.index(letter)
-        new_position = position + shift_amount
-        cipher_text += alphabet[new_position]
+        if letter in alphabet:
+            position = alphabet.index(letter)
+            new_position = position + shift_amount
+            cipher_text += alphabet[new_position]
+        else:
+            cipher_text += letter
     print(cipher_text)
 
 def start():
